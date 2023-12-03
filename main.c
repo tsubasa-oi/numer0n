@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void){
-    int ans = 55;
+    int ans = rand() % 10;
     int num;
     do {
-        printf("数値を入力してください：");
+        printf("1桁の数値を入力してください：");
         scanf("%d", &num);
         if (num < ans){
             printf("誤りです。もっと大きい数値です\n");
