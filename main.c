@@ -3,8 +3,6 @@
 #include <time.h>
 
 int main(void){
-    // int randomnumber[10]={0,1,2,3,4,5,6,7,8,9};
-
     srand((unsigned)time(NULL));
     
     int firstNum = rand() % 10;
@@ -33,7 +31,7 @@ int main(void){
     int inputNum;
     int inputArray[4];
     int hit;
-    int brow;
+    int blow;
     int count = 0;
     do{
         //入力
@@ -48,9 +46,9 @@ int main(void){
 
         //printf("%d%d%d%dです\n",inputArray[0],inputArray[1],inputArray[2],inputArray[3]);
 
-        // hitとbrowの数を0に定義
+        // hitとblowの数を0に定義
         hit = 0;
-        brow = 0;
+        blow = 0;
 
         for (int i = 0 ; i < arraySize ; i++){
             if(inputArray[i] == firstNum){
@@ -77,10 +75,10 @@ int main(void){
             }
         }
 
-        brow = arraySize - hit;
+        blow = arraySize - hit;
         count++;
-        // hit + brow = total;
-        printf("hit:%d brow:%d\n", hit,brow);
+        // hit + blow = total;
+        printf("hit:%d blow:%d\n", hit,blow);
     } while (hit < 4);
 
     printf("%d回目で正解です\n", count);
